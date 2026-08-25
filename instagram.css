@@ -1,0 +1,99 @@
+.instagram-section {
+    background: var(--off);
+}
+
+.instagram-content {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.instagram-copy h2 {
+    max-width: 650px;
+    font-size: clamp(35px, 4vw, 51px);
+    color: var(--navy);
+    line-height: 1.15;
+}
+
+.instagram-copy p {
+    max-width: 650px;
+    margin-top: 18px;
+    color: var(--taupe);
+    font-size: 15px;
+}
+
+.instagram-btn {
+    margin-top: 28px;
+    background: var(--navy);
+    color: #fff;
+    transition: .25s;
+}
+
+.instagram-btn:hover {
+    background: var(--gold);
+}
+
+.instagram-card {
+    min-height: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #dfd5c7;
+    background: #fff;
+    color: var(--navy);
+    box-shadow: 0 20px 55px rgba(31, 47, 70, .08);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.instagram-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 65px rgba(31, 47, 70, .13);
+}
+
+.instagram-symbol {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--gold);
+    border-radius: 22px;
+    color: var(--gold);
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.instagram-card strong {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.instagram-card small {
+    margin-top: 5px;
+    color: var(--taupe);
+    font-size: 11px;
+}
+
+.instagram-card-link {
+    margin-top: 22px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gold);
+}
+
+@media(max-width:850px) {
+    .instagram-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .instagram-card {
+        min-height: 270px;
+    }
+}
