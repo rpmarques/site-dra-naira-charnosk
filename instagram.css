@@ -1,10 +1,10 @@
 .instagram-section {
-    background: var(--off);
+    background: linear-gradient(135deg, #fff 0%, var(--off) 100%);
 }
 
 .instagram-content {
     display: grid;
-    grid-template-columns: 1.15fr .85fr;
+    grid-template-columns: 1.1fr .9fr;
     gap: 80px;
     align-items: center;
 }
@@ -35,41 +35,55 @@
 }
 
 .instagram-card {
-    min-height: 300px;
-    padding: 40px;
+    min-height: 330px;
+    padding: 44px;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     border: 1px solid #dfd5c7;
+    border-radius: 8px 70px 8px 8px;
     background: #fff;
     color: var(--navy);
-    box-shadow: 0 20px 55px rgba(31, 47, 70, .08);
+    box-shadow: 0 24px 60px rgba(31, 47, 70, .10);
     transition: transform .25s, box-shadow .25s;
 }
 
-.instagram-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 65px rgba(31, 47, 70, .13);
+.instagram-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
-.instagram-symbol {
-    width: 72px;
-    height: 72px;
+.instagram-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(31, 47, 70, .15);
+}
+
+.instagram-icon {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 22px;
     display: grid;
     place-items: center;
-    border: 2px solid var(--gold);
     border-radius: 22px;
-    color: var(--gold);
-    font-size: 48px;
-    line-height: 1;
-    margin-bottom: 22px;
+    background: linear-gradient(135deg, #f58529 0%, #dd2a7b 45%, #8134af 72%, #515bd4 100%);
+    box-shadow: 0 12px 30px rgba(129, 52, 175, .22);
+}
+
+.instagram-icon svg {
+    width: 48px;
+    height: 48px;
 }
 
 .instagram-card strong {
     font-family: "Playfair Display", serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 500;
 }
 
@@ -80,7 +94,7 @@
 }
 
 .instagram-card-link {
-    margin-top: 22px;
+    margin-top: 23px;
     color: var(--navy);
     font-size: 12px;
     font-weight: 700;
@@ -94,6 +108,6 @@
     }
 
     .instagram-card {
-        min-height: 270px;
+        min-height: 290px;
     }
 }
